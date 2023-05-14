@@ -23,7 +23,7 @@ int main() {
 
     int sleepTime;
 
-    string sleepText = "Первый делом, укажите задержку: ";
+    string sleepText = "Первым делом, укажите задержку: ";
     cout << sleepText;
     cin >> sleepTime;
     clearConsole();
