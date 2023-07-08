@@ -7,16 +7,6 @@
 
 using namespace std;
 
-void clearConsole() {
-    #if defined _WIN32
-        system("cls");
-    #elif defined (__LINUX__) || defined(__gnu_linux__) || defined(__linux__)
-        system("clear");
-    #elif defined (__APPLE__)
-        system("clear");
-    #endif
-}
-
 int main() {
     SetConsoleOutputCP(CP_UTF8);
     setvbuf(stdout, nullptr, _IOFBF, 1000);
@@ -26,7 +16,7 @@ int main() {
     string sleepText = "Первым делом, укажите задержку: ";
     cout << sleepText;
     cin >> sleepTime;
-    clearConsole();
+    system("cls");
 
     string welcomeText = "F6 - Включить/выключить кликер.\nF5 - указать другую задержку кликера.";
     cout << welcomeText << endl;
